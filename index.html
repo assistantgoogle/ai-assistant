@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Desktop Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="assistant-container">
+    <div class="chat-interface">
+      <div class="chat-header">
+        <h1>Personal Desktop Assistant</h1>
+        <p>How can I help you today?</p>
+        <div id="voiceStatus" class="voice-status">Click "Start Listening" to begin.</div>
+        <button id="startListeningBtn" class="action-btn">Start Listening</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="message assistant">
+          Hello! I'm your personal assistant. I can help you open applications using voice commands or text. Try saying "Hey Assistant" followed by your command!
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button class="action-btn" onclick="openApp('whatsapp')">Open WhatsApp</button>
+        <button class="action-btn" onclick="openApp('chrome')">Open Chrome</button>
+        <button class="action-btn" onclick="openApp('spotify')">Open Spotify</button>
+        <button class="action-btn" onclick="openApp('gmail')">Open Gmail</button>
+        <button class="action-btn" onclick="openApp('youtube')">Open YouTube</button>
+        <button class="action-btn" onclick="openApp('maps')">Open Maps</button>
+      </div>
+
+      <div class="input-area">
+        <input type="text" id="userInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+        <button class="send-btn" onclick="sendMessage()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
